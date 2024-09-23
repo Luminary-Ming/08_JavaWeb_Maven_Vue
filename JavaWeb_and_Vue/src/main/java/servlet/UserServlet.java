@@ -22,7 +22,7 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<User> users = userService.userList();
-        // 推荐使用 gson 工具（阿里是 fastjson），可以将 java 中的对象转成字符串格式的 json 对象，
+        // 使用 gson 工具（阿里是 fastjson），可以将 java 中的对象转成字符串格式的 json 对象，
         // 相反也能让字符串格式的 json 对象转成 java 对象
         Gson gson = new Gson();
         String json = gson.toJson(users);

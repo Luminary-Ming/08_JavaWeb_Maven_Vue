@@ -33,5 +33,6 @@ public class AddUserServlet extends HttpServlet {
 
         Integer i = userService.addUser(user);
         resp.getWriter().write(i.toString());
+
     }
 }
